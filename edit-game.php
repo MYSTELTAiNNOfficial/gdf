@@ -1,4 +1,4 @@
-<?php include_once("game-controller.php"); ?>
+<?php include_once("headnavi.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -1,3 +1,5 @@
+<? include_once("headnavi.php"); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

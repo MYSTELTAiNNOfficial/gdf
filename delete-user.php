@@ -1,5 +1,5 @@
 <?php
-include_once("db-controller.php");
+include_once("headnavi.php");
 ?>
 
 <!DOCTYPE html>
