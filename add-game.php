@@ -5,17 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="game.css?v=<?php echo time(); ?>">
     <title>Create Data</title>
 </head>
 <body>
-<h1>Create New Gamelist Data</h1>
+<div id="formCreate">
+    <h1>Create New Gamelist Data</h1>
 
-<form action="add-game.php" method="POST" enctype = "multipart/form-data">
-    <p>Game Title: <input type="text" name="nama" /></p>
-    <p>Image: <input type="file" name="img" accept="image/*" /></p>
-    <p><input type="submit" name="submit" value="Upload"/></p>
-</form>
-
+    <form action="add-game.php" method="POST" enctype = "multipart/form-data">
+        <label for="gametitle"><b>Game Title</b></label>
+            <br>
+            <input type="text" placeholder="Enter Title" name="name" required>
+            <br>
+            <label for="image"><b>Game Cover Image</b></label>
+            <br>
+            <input type="file"  name="img" accept="img/*" required>
+            <br><br>
+            <input type="submit" value="Upload">
+    </form>
+</div>
 <?php
 
 if (isset($_POST["submit"]) && isset($_FILES['img'])){
@@ -55,7 +63,7 @@ if (isset($_POST["submit"]) && isset($_FILES['img'])){
     }else{
         $message = "Unknown error occurred!";
         header("Location: add-game.php?error=$message");
-    }    
+    }
 }
 ?>
 </body>
