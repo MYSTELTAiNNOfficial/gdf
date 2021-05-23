@@ -18,35 +18,35 @@ $destination_path = getcwd() . DIRECTORY_SEPARATOR . $folder;
 <body>
     <div id="header">
         <?php echo '<img src="' . $folder . "G.D-Logo.png" . '"></img>'; ?>
-        <p>Welcome, Guest!</p>
         <h2>Game Discussion Forum</h2>
+        <p>Welcome, Guest!</p>
     </div>
 
     <button onclick="openNav()">open</button>
 
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
+        <a href="#">HOME</a>
+        <a href="#">GAMES</a>
+        <a href="#">REVIEW</a>
+        <a href="#">ABOUT</a>
+        <a href="#">CONTACT US</a>
     </div>
-    <!-- Use any element to open the sidenav -->
 
 
     <script>
         /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
         function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-            document.getElementById("main").style.marginLeft = "250px";
-            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+            document.getElementById("mySidenav").style.width = "25%";
+            if(screen.availWidth <= 700){
+                document.getElementById("mySidenav").style.width = "30%";
+            }
         }
 
         /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
         function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
-            document.getElementById("main").style.marginLeft = "0";
-            document.body.style.backgroundColor = "white";
+            document.getElementById("mySidenav").style.paddingRight = "0";
         }
     </script>
 </body>
