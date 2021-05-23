@@ -2,21 +2,33 @@
     background-color: black;
     width: 100%;
     height: auto;
-    float: left;
-    padding: 0pt;
-    color: none;
     position: fixed;
-    margin: 0pt;
+    right: 0pt;
+    top: 0pt;
 }
 
-#logo {
+#header img {
     width: 130px;
+    float: left;
 }
 
 #header p {
-    background-color: white;
     color: white;
+    background-color: black;
     float: right;
+    margin-right: 10pt;
+}
+
+#header h2 {
+    color: white;
+    background-color: black;
+    float: left;
+}
+
+button {
+    position: fixed;
+    top: 50%;
+    bottom: auto;
 }
 
 .sidenav {
