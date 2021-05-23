@@ -11,28 +11,51 @@
 <h1>Create New Gamelist Data</h1>
 
 <form action="add-game.php" method="POST" enctype = "multipart/form-data">
-    <p>Game Name: <input type="text" name="nama" /></p>
-    <p>Image: <input type="file" name="img" accept="image/jpg, image/png"/></p>
-    <p><input type="submit" name="submit" /></p>
+    <p>Game Title: <input type="text" name="nama" /></p>
+    <p>Image: <input type="file" name="img" accept="image/*" /></p>
+    <p><input type="submit" name="submit" value="Upload"/></p>
 </form>
 
 <?php
 
-$image = $_FILES["img"]["name"];
-if (isset($_POST["submit"]) && $image != ""){
-    $folder = "image" . chr(92);
-    $destination_path = getcwd() . DIRECTORY_SEPARATOR . $folder;
-    //$target_path = $destination_path . basename( $_FILES["img"]["name"]);
-    $target_path = $destination_path . "namaBaru.jpg";
-    echo $target_path;
-    @move_uploaded_file($_FILES["img"]["tmp_name"], $target_path);
-    //echo '<img src="' .$folder."namaBaru.jpg". '"><p>';
+if (isset($_POST["submit"]) && isset($_FILES['img'])){
 
-    // penyimpanan data yang dikirim melalui form
-    $name_game = $_POST["nama"];
-    $img_link = $_POST["img"];
+    $img_name = $_FILES['img']['name'];
+    $img_size = $_FILES['img']['size'];
+    $tmp_name = $_FILES['img']['tmp_name'];
+    $error = $_FILES['img']['error'];
 
-    createGamelist($name_game, $img_link);
+    if($error === 0){
+        if($img_size > 2097152){
+            $message = "Sorry your file is too large, file must be under 2 MB.";
+            header("Location: add-game.php?error=$message");
+        }else{
+            $img_ex = pathinfo($img_name, PATHINFO_EXTENSION);
+            $img_ex_lc = strtolower($img_ex);
+
+            $allowed_exs = array("jpg", "jpeg", "png");
+
+            if(in_array($img_ex_lc, $allowed_exs)){
+                $new_img_name = uniqid("IMG-", true).'.'.$img_ex_lc;
+                $img_upload_path = 'game_img/'.$new_img_name;
+                move_uploaded_file($tmp_name, $img_upload_path);
+
+                //Insert into Database
+                $name_game = $_POST["nama"];
+                $img_link = $new_img_name;
+
+                createGamelist($name_game, $img_link); 
+                header("Location: gamelist.php");
+
+            }else{
+                $message = "You can't this upload files of this type";
+                header("Location: add-game.php?error=$message");
+            }
+        }
+    }else{
+        $message = "Unknown error occurred!";
+        header("Location: add-game.php?error=$message");
+    }    
 }
 ?>
 </body>
