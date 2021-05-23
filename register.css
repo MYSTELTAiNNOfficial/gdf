@@ -1,0 +1,18 @@
+#register{
+    position: relative;
+    text-align: center;
+    margin: auto;
+    margin-top: 30%;
+    transition: 0.5s;
+}
+@media screen and (max-width: 800px) {
+    #register {
+        margin-top: 55%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #register {
+        margin-top: 85%;
+    }
+}

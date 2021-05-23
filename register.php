@@ -7,27 +7,35 @@ include_once("headnavi.php");
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="register.css?v=<?php echo time(); ?>">
+    <title>REGISTER</title>
 </head>
 <body>
-    <form>
-    <div class = "container">
-    <h2>Create Your Profile </h2>
-    <hr>
-    <label for="Username"><b>Username</b></label>
-    <input type = "text" placeholder = "Username" name = "username" id= "username" required>
-    <label for="Birthday"><b>Birthday</b></label>
-    <input type = "date" name = "birthday" id= "birthday" required>
-    <label for="Hobby"><b>Hobby</b></label>
-    <input type = "text" placeholder = "Hobby" name = "hobby" id= "hobby">
-    <label for="Email"><b>Email</b></label>
-    <input type = "text" placeholder = "Email" name = "email" id= "email" required>
-    <label for="Password"><b>Password</b></label>
-    <input type = "password" placeholder = "Password" name = "password" id= "password" minlength = "10" required>
-    <button type = "submit" class = "registerbtn">Register</button>
+    <div id="register">
+    <form action="profile-controller.php" method="POST" enctype="multipart/form-data">
+            <label for="Username"><b>Username</b></label>
+            <br>
+            <input type="text" placeholder="Enter Username" name="username" required>
+            <br>
+            <label for="email"><b>Email</b></label>
+            <br>
+            <input type="text" placeholder="Enter Email" name="email" required>
+            <br>
+            <label for="password"><b>Password</b></label>
+            <br>
+            <input type="password" placeholder="Enter Password" name="password" required>
+            <br>
+            <label for="Hobby"><b>Hobby</b></label>
+            <br>
+            <input type="text" placeholder="Enter your Hobby" name="hobby">
+            <br>
+            <label for="birthday"><b>Birthday</b></label>
+            <br>
+            <input type="date" placeholder="Enter your Birthday" name="birthday">
+            <br><br>
+            <input type="submit" value="SUBMIT">
+    </form>
     </div>
     
     </form>
