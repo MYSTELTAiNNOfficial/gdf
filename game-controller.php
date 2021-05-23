@@ -6,28 +6,28 @@ function readGamelist(){
     $conn = my_connectDB();
 
     if($conn!=NULL){
-        $sql_query = "SELECT * FROM `game`";
+        $sql_query = "SELECT * FROM game";
         $result = mysqli_query($conn,$sql_query) or die(mysqli_error($conn));
 
         if($result->num_rows > 0){
             while ($row = $result->fetch_assoc()){
-                $data['id'] = $row["id"];
-                $data['name'] = $row["name_game"];
-                $data['img'] = $row["img_link"];
+                $data['id'] = $row['id'];
+                $data['name'] = $row['name_game'];
+                $data['img'] = $row['img_link'];
                 array_push($allData, $data);
             }
         }
     }
-    my_closeDB($conn);
     return $allData;
+    my_closeDB($conn);
 }
 
 //function to save data game
 function createGamelist($name_game, $img_link){
-    if($name_game!="" && $img_link!=""){
+    if($name_game!="" || $img_link!=""){
         $conn = my_connectDB();
-        $sql_query = "INSERT INTO 'game' ('id','name_game', 'img_link')
-                                VALUES (NULL, '$name_game', '$img_link');";
+        $sql_query = "INSERT INTO game (id, name_game, img_link)
+                                VALUES (id ,'$name_game', '$img_link');";
         echo $sql_query;
         $result = mysqli_query($conn,$sql_query) or die(mysqli_error($conn));
         my_closeDB($conn);

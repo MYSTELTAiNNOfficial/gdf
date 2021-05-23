@@ -15,9 +15,9 @@
     foreach ($result as $barisdata) {
     ?>
     <tr>
-        <td><?=$barisdata["id"]?></td>
-        <td><?=$barisdata["name_game"]?></td>
-        <td><?=$barisdata["img_link"]?></td>
+        <td><?=$barisdata['id']?></td>
+        <td><?=$barisdata['name_game']?></td>
+        <td><?=$barisdata['img_link']?></td>
         <td><a href="delete-game.php?deleteID=<?=$barisdata['id']?>">Delete</a></td>
         <td><a href="edit-game.php?updateID=<?=$barisdata['id']?>">Update</a></td>        
     </tr>
