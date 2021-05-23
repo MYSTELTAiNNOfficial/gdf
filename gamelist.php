@@ -15,13 +15,15 @@
         <?php
         $result = readGamelist();
         foreach ($result as $row) {
-            echo "<tr>";
-            echo "<td>" . $row['id'] . "</td>";
-            echo "<td>" . $row['name'] . "</td>";
-            echo "<td><img src='" . $row['img'] . "'></td>";
-            echo "<td><a href='delete-game.php?deleteID=" . $row['id'] . "'>Delete</a></td>";
-            echo "<td><a href='edit-game.php?updateID=" . $row['id'] . "'>Update</a></td>";
-            echo "</tr>";
+        ?>
+            <tr>
+                <td><?= $row['id'] ?></td>
+                <td><?= $row['name'] ?></td>
+                <td><img src="<?= $row['img'] ?>"></td>
+                <td><a href="delete-game.php?deleteID= <?= $row['id'] ?>">Delete</a></td>
+                <td><a href="edit-game.php?updateID=<?= $row['id'] ?>">Update</a></td>
+            </tr>
+        <?php
         }
         ?>
     </table>
