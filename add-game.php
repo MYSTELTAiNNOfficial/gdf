@@ -21,8 +21,9 @@
             <br>
             <input type="file"  name="img" accept="img/*" required>
             <br><br>
-            <input type="submit" value="Upload">
+            <input type="submit" value="Upload"> 
     </form>
+    <button onclick="location.href='admin-edit.php'">Back to admin control</button>
 </div>
 </body>
 </html>

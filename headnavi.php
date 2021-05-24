@@ -26,11 +26,12 @@ $destination_path = getcwd() . DIRECTORY_SEPARATOR . $folder;
 
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">HOME</a>
-        <a href="#">GAMES</a>
+        <a href="index.php">HOME</a>
+        <a href="gamelist.php">GAMES</a>
         <a href="#">REVIEW</a>
         <a href="#">ABOUT</a>
         <a href="#">CONTACT US</a>
+        <a href="admin-edit.php">Admin Control</a>
     </div>
 
 
