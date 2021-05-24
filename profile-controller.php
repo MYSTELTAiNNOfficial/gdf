@@ -31,7 +31,7 @@ function createProfile($user, $email, $birth, $pass, $hobby, $title){
     if($user!="" && $email!="" && $birth!="" && $pass!="" && $hobby!="" && $title!=""){
         $conn = my_connectDB();
         $sql_query = "INSERT INTO 'profile' ('id','username', 'email', 'birthday', 'password', 'hobby', 'title')
-                                VALUES (NULL, '$user', '$email','$birth','$pass','$hobby','$title',);";
+                                VALUES (NULL, '$user', '$email','$birth','$pass','$hobby','$title');";
         echo $sql_query;
         $result = mysqli_query($conn,$sql_query) or die(mysqli_error($conn));
         my_closeDB($conn);

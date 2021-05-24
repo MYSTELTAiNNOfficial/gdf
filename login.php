@@ -1,3 +1,4 @@
+<?php include_once("headnavi.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,8 +10,8 @@
 
 <body>
     <div id="login">
-        <form action="login.php" method="POST" enctype="multipart/form-data">
-            <label for="email"><b>Email</b></label>
+        <form action="loginprocess.php" method="POST" enctype="multipart/form-data">
+            <label for="username"><b>Username</b></label>
             <br>
             <input type="text" placeholder="Enter Username" name="username" required>
             <br>

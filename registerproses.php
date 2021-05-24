@@ -1,4 +1,4 @@
-<?php include_once("profile-controller.php");
+<?php include_once("headnavi.php");
 
 
 if(isset($_POST['register'])){
