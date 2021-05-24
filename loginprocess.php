@@ -18,21 +18,25 @@ if(isset($_POST['username']) && isset($_POST['password'])){
         header("Location: login.php?error=Password is required");
         exit();
     }else{
-
-        $sql = "SELECT * FROM 'profile' WHERE 'username'='$uname' AND 'password'='$pass'";
-
-        $result = mysqli_query($conn, $sql);
-
-        if (mysqli_num_rows($result) === 1) {
-            $row = mysqli_fetch_assoc($result);
-            if ($row['username'] === $uname && $row['password'] === $pass) {
-                $_SESSION['id'] = $row['id'];
-                $_SESSION['username'] = $row['username'];
-                $_SESSION['email'] = $row['email'];
-                $_SESSION['password'] = $row['password'];
-                $_SESSION['birthday'] = $row['birthday'];
-                $_SESSION['hobby'] = $row['hobby'];
-                $_SESSION['title'] = $row['title'];
+        $result = readProfile();
+        foreach ($result as $key){
+            $id = $key['id'];
+            $username = $key['user'];
+            $email = $key['email'];
+            $password = $key['pass'];
+            $birthday = $key['birth'];
+            $hobby = $key['hobby'];
+            $title = $key['title'];
+        }
+        if ($uname === $username) {
+            if ($pass === $password) {
+                $_SESSION['id'] = $id;
+                $_SESSION['username'] = $username;
+                $_SESSION['email'] = $email;
+                $_SESSION['password'] = $password;
+                $_SESSION['birthday'] = $birthday;
+                $_SESSION['hobby'] = $hobby;
+                $_SESSION['title'] = $title;
                 header("Location: index.php");
                 exit();
             }else{

@@ -6,7 +6,7 @@
     $conn = my_connectDB();
 
     if($conn!=NULL){
-        $sql_query = "SELECT * FROM `profile`";
+        $sql_query = "SELECT * FROM profile";
         $result = mysqli_query($conn,$sql_query) or die(mysqli_error($conn));
 
         if($result->num_rows > 0){
