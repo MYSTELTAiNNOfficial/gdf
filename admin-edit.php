@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="game.css?v=<?php echo time(); ?>">
-    <title>Gamelist</title>
+    <title>Admin Control</title>
 </head>
 
 <body>
 <div id="gamelist">
-    <h1>Gamelist</h1>
+    <h1>Admin Control</h1>
     <table border="1" cellspacing="0">
         <?php
         $result = readGamelist();
