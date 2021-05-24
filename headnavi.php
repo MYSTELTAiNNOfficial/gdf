@@ -1,5 +1,5 @@
 <?php
-include_once "admin-controller.php";
+include_once "profile-controller.php";
 include_once "game-controller.php";
 ?>
 <!DOCTYPE html>
