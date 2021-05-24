@@ -1,7 +1,6 @@
 <?php
 include_once "admin-controller.php";
 include_once "game-controller.php";
-include_once "user-controller.php";
 ?>
 <!DOCTYPE html>
 <html>
