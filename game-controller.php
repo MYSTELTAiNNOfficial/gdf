@@ -55,7 +55,7 @@ function getGamelist($id)
     $data = array();
     if ($id > 0) {
         $conn = my_connectDB();
-        $sql_query = "SELECT * FROM 'game' WHERE 'id' = " . $id;
+        $sql_query = "SELECT * FROM game WHERE id = $id";
         $result = mysqli_query($conn, $sql_query) or die(mysqli_error($conn));
 
         if ($result->num_rows > 0) {
@@ -76,10 +76,10 @@ function updateGamelist($id, $name_game, $img_link)
     $result = 0;
     if ($id != "" && $name_game != "" && $img_link != "") {
         $conn = my_connectDB();
-        $sql_query = "UPDATE 'game'
-                        SET 'name_game' = '$name_game',
-                            'img_link' = '$img_link',
-                        WHERE 'id' = $id;";
+        $sql_query = "UPDATE game
+                        SET name_game = '$name_game',
+                            img_link = '$img_link'
+                        WHERE id = '$id' ";
         $result = mysqli_query($conn, $sql_query) or die(mysqli_error($conn));
         my_closeDB($conn);
     }

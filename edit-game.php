@@ -17,10 +17,10 @@ if (isset($_GET["updateID"]))
 ?>
 
 <div id="formEdit">
-    <h1>Edit Gamelist Data with ID<?=$data_to_be_updated?></h1>
+    <h1>Edit Gamelist Data ID No <?=$data_to_be_updated?></h1>
 
     <form action="editgameprocess.php" method="POST" enctype = "multipart/form-data">
-            <label for="gametitle"><b>Game Title</b></label>
+            <label for="gameid"><b>Game ID</b></label>
             <br>
             <input type="text" name="id" value="<?=$data['id']?>"readonly>
             <br>

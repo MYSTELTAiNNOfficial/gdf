@@ -8,7 +8,7 @@ include_once "game-controller.php";
     if($error === 0){
         if($img_size > 2097152){
             $message = "Sorry your file is too large, file must be under 2 MB.";
-            header("Location: add-game.php?error=$message");
+            header("Location: edit-game.php?error=$message");
         }else{
             $img_ex = pathinfo($img_name, PATHINFO_EXTENSION);
             $img_ex_lc = strtolower($img_ex);
@@ -25,15 +25,15 @@ include_once "game-controller.php";
                 $name_game = $_POST['name'];
                 $img_link = $img_upload_path;
 
-                createGamelist($id, $name_game, $img_link); 
+                $result = updateGamelist($id, $name_game, $img_link); 
                 header("Location: gamelist.php");
             }else{
                 $message = "You can't this upload files of this type";
-                header("Location: add-game.php?error=$message");
+                header("Location: edit-game.php?error=$message");
             }
         }
     }else{
         $message = "Unknown error occurred!";
-        header("Location: add-game.php?error=$message");
+        header("Location: edit-game.php?error=$message");
     }
 ?>
