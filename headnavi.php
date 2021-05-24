@@ -50,7 +50,8 @@ $destination_path = getcwd() . DIRECTORY_SEPARATOR . $folder;
         <?php
         }else if ($_SESSION['title']==null){?>
             <a href="login.php">Login</a>
-        <?php}?>
+        <?php
+    }?>
     </div>
 
 
@@ -71,5 +72,4 @@ $destination_path = getcwd() . DIRECTORY_SEPARATOR . $folder;
     </script>
     
 </body>
-<?php}?>
 </html>
