@@ -1,7 +1,8 @@
 #formCreate {
-    position: relative;
+    position: absolute;
     text-align: center;
-    margin: auto;
+    margin-left: 38%;
+    float: left;
     margin-top: 25%;
     transition: 0.5s;
 }
@@ -31,6 +32,7 @@
 
 @media screen and (max-width: 800px) {
     #formCreate {
+        margin-left: 20%;
         margin-top: 50%;
     }
     #gamelist {
