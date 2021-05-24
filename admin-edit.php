@@ -26,11 +26,12 @@
                 <td><a href="edit-game.php?updateID=<?= $row['id'] ?>">Update</a></td>
             </tr>
             <br>
-            <button onclick="location.href='add-game.php'">Add new game</button>
+            
         <?php
         }
         ?>
     </table>
+    <button onclick="location.href='add-game.php'">Add new game</button>
 </div>
 </body>
 
