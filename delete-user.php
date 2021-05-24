@@ -12,7 +12,7 @@ include_once("headnavi.php");
 </head>
 <body>
     <?php
-    
+
     ?>
 </body>
 </html>

@@ -37,7 +37,5 @@ include_once("headnavi.php");
             <input type="submit" value="SUBMIT">
     </form>
     </div>
-    
-    </form>
 </body>
 </html>
