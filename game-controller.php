@@ -42,7 +42,7 @@ function deleteGamelist($id)
     $result = 0;
     if ($id > 0) {
         $conn = my_connectDB();
-        $sql_query = "DELETE FROM 'game' WHERE 'id' = " . $id;
+        $sql_query = "DELETE FROM game WHERE id = $id ";
         $result = mysqli_query($conn, $sql_query) or die(mysqli_error($conn));
         my_closeDB($conn);
     }
