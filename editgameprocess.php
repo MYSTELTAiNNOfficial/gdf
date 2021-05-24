@@ -21,10 +21,11 @@ include_once "game-controller.php";
                 move_uploaded_file($tmp_name, $img_upload_path);
 
                 //Insert into Database
+                $id = $_POST['id'];
                 $name_game = $_POST['name'];
                 $img_link = $img_upload_path;
 
-                createGamelist($name_game, $img_link); 
+                createGamelist($id, $name_game, $img_link); 
                 header("Location: gamelist.php");
             }else{
                 $message = "You can't this upload files of this type";

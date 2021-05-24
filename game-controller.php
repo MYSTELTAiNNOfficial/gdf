@@ -60,9 +60,9 @@ function getGamelist($id)
 
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
-                $data['id'] = $row["id"];
-                $data['name'] = $row["name_game"];
-                $data['img'] = $row["img_link"];
+                $data['id'] = $row['id'];
+                $data['name'] = $row['name_game'];
+                $data['img'] = $row['img_link'];
             }
         }
         my_closeDB($conn);

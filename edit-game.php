@@ -26,11 +26,11 @@ if (isset($_GET["updateID"]))
             <br>
             <label for="gametitle"><b>Game Title</b></label>
             <br>
-            <input type="text" placeholder="Enter Title" name="name" value="<?=$data['name_game']?>" required>
+            <input type="text" placeholder="Enter Title" name="name" value="<?=$data['name']?>" required>
             <br>
             <label for="image"><b>Game Cover Image</b></label>
             <br>
-            <input type="file"  name="img" accept="img/*" value="<?=$data['img_link']?>" required>
+            <input type="file"  name="img" accept="img/*" value="<?=$data['img']?>" required>
             <br><br>
             <input type="submit" value="Upload">
     </form>
