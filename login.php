@@ -1,5 +1,16 @@
 <?php
 include_once("headnavi.php");
+session_start();
+
+//check user already log in
+if(isset($_SESSION["logged in"]) && $_SESSION["loggedin"] === true){
+    header("location : index.php");
+    exit;
+}
+
+
+
+
 ?>
 
 <!DOCTYPE html>
