@@ -1,7 +1,7 @@
-<?php include_once("headnavi.php");
+<?php include_once("profile-controller.php");
 
 
-if(isset($_POST['register'])){
+if(isset($_POST['username'])){
     $user = $_POST['username'];
     $email = $_POST['email'];
     $pass = $_POST['password'];
@@ -12,16 +12,17 @@ if(isset($_POST['register'])){
 
     
 
-    if($username && $email && $password && $birthday && $hobby){
-        if(eregi("^[0-9a-z]([-_.]?[0-9a-z])*@[0-9a-z]([-.]?[0-9a-z])*\\.[a-z]{2,3}$", $email)){
-            if($pass == $pass2){
+
+    if($user && $email && $pass && $birth && $hobby){
+            if($pass === $pass2){
                 createProfile( $user, $email, $birth, $pass, $hobby, $title);
                 header("Location : login.php");
             }else{
                 $message = "Password is not the same..";
                 header("Location: register.php?error=$message");
             }
-        }
+    }else{
+        echo "error";
     }
 }
 

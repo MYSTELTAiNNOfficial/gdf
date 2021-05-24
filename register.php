@@ -8,7 +8,7 @@
 </head>
 <body>
     <div id="register">
-    <form action="profile-controller.php" method="POST" enctype="multipart/form-data">
+    <form action="registerproses.php" method="POST" enctype="multipart/form-data">
             <label for="Username"><b>Username</b></label>
             <br>
             <input type="text" placeholder="Enter Username" name="username" required>

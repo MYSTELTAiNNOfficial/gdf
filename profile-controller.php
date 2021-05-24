@@ -30,7 +30,7 @@
 function createProfile($user, $email, $birth, $pass, $hobby, $title){
     if($user!="" && $email!="" && $birth!="" && $pass!="" && $hobby!="" && $title!=""){
         $conn = my_connectDB();
-        $sql_query = "INSERT INTO 'profile' ('id','username', 'email', 'birthday', 'password', 'hobby', 'title')
+        $sql_query = "INSERT INTO profile (id,username, email, birthday, password, hobby, title)
                                 VALUES (NULL, '$user', '$email','$birth','$pass','$hobby','$title');";
         echo $sql_query;
         $result = mysqli_query($conn,$sql_query) or die(mysqli_error($conn));
@@ -45,7 +45,7 @@ function deleteProfile($id){
     $result=0;
     if($id>0){
         $conn = my_connectDB();
-        $sql_query = "DELETE FROM 'profile' WHERE 'id' = ".$id;
+        $sql_query = "DELETE FROM profile WHERE id = '$id'";
         $result = mysqli_query($conn, $sql_query) or die(mysqli_error($conn));
         my_closeDB($conn);
     }
@@ -57,7 +57,7 @@ function getProfile($id){
     $data = array();
     if($id>0){
         $conn = my_connectDB();
-        $sql_query = "SELECT * FROM 'profile' WHERE 'id' = ".$id;
+        $sql_query = "SELECT * FROM profile WHERE id ='$id'";
         $result = mysqli_query($conn,$sql_query) or die(mysqli_error($conn));
 
         if($result->num_rows > 0){
