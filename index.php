@@ -1,4 +1,4 @@
-<? include_once("headnavi.php"); ?>
+<?php include_once("headnavi.php");?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,6 +12,3 @@
     
 </body>
 </html>
-<?php
-
-?>

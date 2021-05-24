@@ -1,6 +1,7 @@
 <?php
 include_once "profile-controller.php";
 include_once "game-controller.php";
+session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -9,6 +10,7 @@ include_once "game-controller.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="headnavi.css?v=<?php echo time(); ?>">
 </head>
+
 <?php
 $folder = "image" . chr(92);
 $destination_path = getcwd() . DIRECTORY_SEPARATOR . $folder;
@@ -18,7 +20,15 @@ $destination_path = getcwd() . DIRECTORY_SEPARATOR . $folder;
     <div id="header">
         <?php echo '<img src="' . $folder . "G.D-Logo.png" . '"></img>'; ?>
         <h2>Game Discussion Forum</h2>
-        <p>Welcome, Guest!</p>
+        <?php
+        if (!$_SESSION['username']==null){ ?>
+            <p>Welcome, <?=$_SESSION['username']?>!</p>
+        <?php
+        } else {?>
+            <p>Welcome, Guest!</p>
+        <?php
+        }
+        ?>
     </div>
 
     <button onclick="openNav()">open</button>
@@ -30,7 +40,17 @@ $destination_path = getcwd() . DIRECTORY_SEPARATOR . $folder;
         <a href="#">REVIEW</a>
         <a href="#">ABOUT</a>
         <a href="#">CONTACT US</a>
-        <a href="admin-edit.php">Admin Control</a>
+        <?php
+        if ($_SESSION['title'] == "admin"){?>
+            <a href="admin-edit.php">Admin Control</a>
+            <a href="logout.php">Logout</a>
+        <?php
+        }else if ($_SESSION['title']=="user"){?>
+            <a href="logout.php">Logout</a>
+        <?php
+        }else if ($_SESSION['title']==null){?>
+            <a href="login.php">Login</a>
+        <?php}?>
     </div>
 
 
@@ -49,6 +69,7 @@ $destination_path = getcwd() . DIRECTORY_SEPARATOR . $folder;
             document.getElementById("mySidenav").style.paddingRight = "0";
         }
     </script>
+    
 </body>
-
+<?php}?>
 </html>

@@ -1,9 +1,4 @@
-<?php
-include_once("headnavi.php");
-?>
-
-
-
+<?php include_once("headnavi.php");?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,6 +21,10 @@ include_once("headnavi.php");
             <br>
             <input type="password" placeholder="Enter Password" name="password" required>
             <br>
+            <label for="password2"><b>Confirm your Password</b></label>
+            <br>
+            <input type="password" placeholder="Confirm your Password" name="password2" required>
+            <br>
             <label for="Hobby"><b>Hobby</b></label>
             <br>
             <input type="text" placeholder="Enter your Hobby" name="hobby">
@@ -39,3 +38,5 @@ include_once("headnavi.php");
     </div>
 </body>
 </html>
+
+

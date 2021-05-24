@@ -1,4 +1,8 @@
-<?php include_once("headnavi.php"); ?>
+<?php include_once("headnavi.php"); 
+if(!$_SESSION == "admin"){
+    header("Location: index.php?error=Fuck off! you dont have permission, Login first you bitch");
+    exit();
+}?>
 <!DOCTYPE html>
 <html lang="en">
 

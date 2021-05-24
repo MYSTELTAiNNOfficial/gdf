@@ -1,18 +1,3 @@
-<?php
-include_once("headnavi.php");
-session_start();
-
-//check user already log in
-if(isset($_SESSION["logged in"]) && $_SESSION["loggedin"] === true){
-    header("location : index.php");
-    exit;
-}
-
-
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,10 +9,10 @@ if(isset($_SESSION["logged in"]) && $_SESSION["loggedin"] === true){
 
 <body>
     <div id="login">
-        <form action="profile-controller.php" method="POST" enctype="multipart/form-data">
+        <form action="login.php" method="POST" enctype="multipart/form-data">
             <label for="email"><b>Email</b></label>
             <br>
-            <input type="text" placeholder="Enter Email" name="email" required>
+            <input type="text" placeholder="Enter Username" name="username" required>
             <br>
             <label for="password"><b>Password</b></label>
             <br>

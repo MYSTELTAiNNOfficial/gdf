@@ -27,8 +27,8 @@
 }
 
 //function to save data 
-function createProfile($id, $user, $email, $birth, $pass, $hobby, $title){
-    if($id!="" && $user!="" && $email!="" && $birth!="" && $pass!="" && $hobby!="" && $title!=""){
+function createProfile($user, $email, $birth, $pass, $hobby, $title){
+    if($user!="" && $email!="" && $birth!="" && $pass!="" && $hobby!="" && $title!=""){
         $conn = my_connectDB();
         $sql_query = "INSERT INTO 'profile' ('id','username', 'email', 'birthday', 'password', 'hobby', 'title')
                                 VALUES (NULL, '$user', '$email','$birth','$pass','$hobby','$title',);";
