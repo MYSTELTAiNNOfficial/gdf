@@ -9,7 +9,7 @@ if($_SESSION['username'] !== null){
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="register.css?v=<?php echo time(); ?>">
-    <title>REGISTER</title>
+    <title>Register | GDF</title>
 </head>
 <body>
     <div id="register">

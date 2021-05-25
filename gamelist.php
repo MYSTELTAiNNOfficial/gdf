@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="game.css?v=<?php echo time(); ?>">
-    <title>Gamelist</title>
+    <title>All Game List | GDF</title>
 </head>
 
 <body>
@@ -19,7 +19,7 @@
         foreach ($result as $row) {
         ?>
             <tr>
-                <td><?= $row['name'] ?></td>
+                <td><a href="reviewlist.php?id_game=<?= $row['id'] ?>"><?= $row['name'] ?></td>
                 <td><img src="<?= $row['img'] ?>"></td>
             </tr>
         <?php

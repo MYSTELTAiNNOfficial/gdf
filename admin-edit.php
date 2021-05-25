@@ -11,7 +11,7 @@ if($_SESSION['title'] != "admin"){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="game.css?v=<?php echo time(); ?>">
-    <title>Admin Control</title>
+    <title>Admin Control | GDF</title>
 </head>
 
 <body>

@@ -1,5 +1,6 @@
 <?php
 include_once("headnavi.php");
+session_start();
 
 //check user already log in
 if (isset($_POST['username']) && isset($_POST['password'])) {

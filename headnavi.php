@@ -1,6 +1,7 @@
 <?php
 include_once "profile-controller.php";
 include_once "game-controller.php";
+include_once "review-controller.php";
 session_start();
 ?>
 <!DOCTYPE html>
@@ -37,7 +38,7 @@ $destination_path = getcwd() . DIRECTORY_SEPARATOR . $folder;
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="index.php">HOME</a>
         <a href="gamelist.php">GAMES</a>
-        <a href="#">REVIEW</a>
+        <a href="reviewlist.php">REVIEW</a>
         <a href="#">ABOUT</a>
         <a href="#">CONTACT US</a>
         <?php

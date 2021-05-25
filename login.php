@@ -1,5 +1,4 @@
 <?php include_once("headnavi.php");
-session_start();
 if($_SESSION['username'] != null){
     header("Location: index.php?error=You has been login-ed, please logout first");
     exit();
@@ -10,7 +9,7 @@ if($_SESSION['username'] != null){
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="login.css?v=<?php echo time(); ?>">
-    <title>LOGIN</title>
+    <title>Login | GDF</title>
 </head>
 
 <body>
