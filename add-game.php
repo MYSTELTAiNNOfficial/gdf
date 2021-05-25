@@ -1,4 +1,8 @@
-<?php include_once("headnavi.php"); ?>
+<?php include_once("headnavi.php");
+if($_SESSION['title'] != "admin"){
+    header("Location: index.php?error=you dont have permission, Login first");
+    exit();
+}?>?>
 <!DOCTYPE html>
 <html lang="en">
 

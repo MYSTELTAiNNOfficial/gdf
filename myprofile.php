@@ -1,8 +1,10 @@
 <?php
-
+session_start();
 include_once("headnavi.php");
-
-?>
+if($_SESSION['username'] == null){
+    header("Location: index.php?error=you dont have permission, Login first");
+    exit();
+}?>
 
 <!DOCTYPE html>
 <html lang="en">
