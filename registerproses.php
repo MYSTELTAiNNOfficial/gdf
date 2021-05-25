@@ -10,9 +10,6 @@ if(isset($_POST['username'])){
     $hobby = $_POST['hobby'];
     $title = "user";
 
-    
-
-
     if($user && $email && $pass && $birth && $hobby){
             if($pass === $pass2){
                 createProfile( $user, $email, $birth, $pass, $hobby, $title);
