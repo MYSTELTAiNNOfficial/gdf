@@ -27,9 +27,8 @@ if(isset($_POST['username']) && isset($_POST['password'])){
             $birthday = $key['birth'];
             $hobby = $key['hobby'];
             $title = $key['title'];
-        }
-        if ($uname === $username) {
-            if ($pass === $password) {
+            if ($uname == $username) {
+            if ($pass == $password) {
                 $_SESSION['id'] = $id;
                 $_SESSION['username'] = $username;
                 $_SESSION['email'] = $email;
@@ -46,6 +45,7 @@ if(isset($_POST['username']) && isset($_POST['password'])){
         }else{
             header("Location: login.php?error=Incorect User name or password");
             exit();
+        }
         }
     }
 }else{
