@@ -76,15 +76,12 @@ function getReviewByLikes()
     my_closeDB($conn);
     return $allData;
 }
-function createReview($id_game, $id_user, $name_user, $comment)
+function createReview($id_game, $id_user, $name_game, $name_user, $comment)
 {
     if ($comment != "") {
         $likes = 0;
         $conn = my_connectDB();
-        $now = new DateTime('now', new DateTimeZone('Asia/Jakarta'));
-        $time = $now->format('Y-m-s H:i:s');
-        $created = $time;
-        $name_game = "SELECT name_game FROM game WHERE id = '$id_game'";
+        $created = timeDB();
         $sql_query = "INSERT INTO review (id, id_game, id_user, name_game, name_user, comment, likes_count, created)
                                         VALUES (NULL, '$id_game', '$id_user','$name_game','$name_user','$comment','$likes','$created');";
         echo $sql_query;
@@ -94,3 +91,4 @@ function createReview($id_game, $id_user, $name_user, $comment)
         return "Data still not completed";
     }
 }
+

@@ -15,7 +15,7 @@ if(isset($_POST['username'])){
                 createProfile( $user, $email, $birth, $pass, $hobby, $title);
                 header("Location : login.php");
             }else{
-                $message = "Password is not the same..";
+                $message = "Password is not same..";
                 header("Location: register.php?error=$message");
             }
     }else{

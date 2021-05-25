@@ -1,0 +1,17 @@
+#tablereview {
+    position: absolute;
+    text-align: center;
+    margin-left: 30vw;
+    margin-right: auto;
+    margin-top: 20%;
+    transition: 0.5s;
+}
+
+#formaddreview {
+    position: absolute;
+    text-align: center;
+    margin-left: 30vw;
+    margin-right: auto;
+    margin-top: 20%;
+    transition: 0.5s;
+}

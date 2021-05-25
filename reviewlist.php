@@ -7,15 +7,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="review.css?v=<?php echo time(); ?>">
     <title>Review | GDF</title>
 </head>
 
 <body>
     <?php
     if (isset($_GET["id_game"])) {
-        $id = $_GET['id_game'];
+        $id_game = $_GET['id_game'];
         $test = getReviewByGameID($id_game);
-        echo "<h1>". $test['name_game'] ."Review</h1>
+        echo "<div id='tablereview'><h1>Review</h1>
             <table border='1' cellspacing='0'>";
         foreach ($test as $row) {
     ?>
@@ -28,7 +29,6 @@
             </tr>
         <?php
         }
-        echo "</table>";
     }else{
         $test = getReviewByNewerDate();
         echo "<div id='tablereview'>
@@ -45,15 +45,13 @@
             </tr>
         <?php
         }
-        echo "</table></div>";
     }
-    if ($_SESSION['id_user'] != null && isset($_GET["id_game"])) { ?>
-        <?= $temp = $_GET["id_game"]; ?>
-        <a href="add-review.php?id_game=<?=$temp?>"><button>ADD REVIEW</button></a>
+    if ($_SESSION['id'] != null && isset($_GET["id_game"])) { ?>
+        <a href="add-review.php?id_game=<?=$_GET["id_game"]?>"><button>ADD REVIEW</button></a>
     <?php
     }
     ?>
-    </table>
+    </table></div>
 </body>
 
 </html>
