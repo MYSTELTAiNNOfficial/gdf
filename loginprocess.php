@@ -20,37 +20,28 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         exit();
     } else {
         $result = getProfilebyUserandPass($uname, $pass);
-        foreach ($result as $i) {
-            $id = $i['id'];
-            $username = $i['user'];
-            $email = $i['email'];
-            $password = $i['pass'];
-            $birthday = $i['birth'];
-            $hobby = $i['hobby'];
-            $title = $i['title'];
-            if ($uname === $username) {
-                if ($pass === $password) {
-                    $_SESSION['id'] = $id;
-                    $_SESSION['username'] = $username;
-                    $_SESSION['email'] = $email;
-                    $_SESSION['password'] = $password;
-                    $_SESSION['birthday'] = $birthday;
-                    $_SESSION['hobby'] = $hobby;
-                    $_SESSION['title'] = $title;
-                    header("Location: index.php");
-                    exit();
-                } else {
-                    header("Location: login.php?error=Incorect password!");
-                    exit();
-                }
+        if (mysqli_num_rows($result) === 1) {
+            $i = mysqli_fetch_assoc($result);
+            if ($uname === $i['username'] && $pass === $i['password']) {
+                $_SESSION['id'] = $i['id'];
+                $_SESSION['username'] = $i['username'];
+                $_SESSION['email'] = $i['email'];
+                $_SESSION['password'] = $i['password'];
+                $_SESSION['birthday'] = $i['birthday'];
+                $_SESSION['hobby'] = $i['hobby'];
+                $_SESSION['title'] = $i['title'];
+                header("Location: index.php");
+                exit();
             } else {
-                header("Location: login.php?error=Incorect username!");
+                header("Location: login.php?error=Incorect username or password!");
                 exit();
             }
+        } else {
+            header("Location: login.php?Incorect username or password!");
+            exit();
         }
     }
 } else {
     header("Location: index.php");
     exit();
 }
-?>

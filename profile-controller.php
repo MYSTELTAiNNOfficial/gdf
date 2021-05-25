@@ -8,21 +8,9 @@ function getProfilebyUserandPass($uname, $pass)
     if ($conn != null) {
         $sql_query = "SELECT * FROM profile WHERE username = '$uname' AND password = '$pass'";
         $result = mysqli_query($conn, $sql_query) or die(mysqli_error($conn));
-        if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-                $temp['id'] = $row["id"];
-                $temp['user'] = $row["username"];
-                $temp['email'] = $row["email"];
-                $temp['birth'] = $row["birthday"];
-                $temp['pass'] = $row["password"];
-                $temp['hobby'] = $row["hobby"];
-                $temp['title'] = $row["title"];
-                array_push($data, $temp);
-            }
-        }
+        return $result;
     }
-    my_closeDB($conn);
-    return $data;
+    my_closeDB($conn);   
 }
 
 function readProfile()
