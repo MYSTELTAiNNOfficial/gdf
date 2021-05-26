@@ -91,7 +91,7 @@ function createReview($id_game, $id_user, $name_game, $name_user, $comment)
         return "Data still not completed";
     }
 }
-function addLike($id,){
+function addLike($id){
     if ($id != null){
         $conn = my_connectDB();
         $sql = "UPDATE review SET likes_count=likes_count+1 WHERE id='$id'";

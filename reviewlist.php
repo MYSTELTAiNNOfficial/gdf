@@ -24,34 +24,43 @@
                 <td><?= $row['name_user'] ?></td>
                 <td><?= $row['name_game'] ?></td>
                 <td><?= $row['comment'] ?></td>
-                <td><a href="likeaddprocess.php?id_comment=<?=$row['id']?>&id_game=<?=$row['id_game']?>"><?= $row['likes_count'] ?></td>
+                <?php if (!$_SESSION['id'] != null) { ?>
+                    <td><a href="likeaddprocess.php?id_comment=<?= $row['id'] ?>&id_game=<?= $row['id_game'] ?>"><?= $row['likes_count'] ?></td>
+                <?php } else { ?>
+                    <td><?= $row['likes_count'] ?></td>
+                <?php } ?>
                 <td><?= $row['created'] ?></td>
             </tr>
         <?php
         }
-    }else{
+    } else {
         $test = getReviewByNewerDate();
         echo "<div id='tablereview'>
-        <h1>". $test['name_game'] ."Review</h1>
+        <h1>" . $test['name_game'] . "Review</h1>
             <table border='1' cellspacing='0'>";
         foreach ($test as $row) {
-    ?>
+        ?>
             <tr>
                 <td><?= $row['name_user'] ?></td>
                 <td><?= $row['name_game'] ?></td>
                 <td><?= $row['comment'] ?></td>
-                <td><a href="likeaddprocess.php?id_comment=<?=$row['id']?>&id_game=<?=$row['id_game']?>"><?= $row['likes_count'] ?></td>
+                <?php if (!$_SESSION['id'] != null) { ?>
+                    <td><a href="likeaddprocess.php?id_comment=<?= $row['id'] ?>&id_game=<?= $row['id_game'] ?>"><?= $row['likes_count'] ?></td>
+                <?php } else { ?>
+                    <td><?= $row['likes_count'] ?></td>
+                <?php } ?>
                 <td><?= $row['created'] ?></td>
             </tr>
         <?php
         }
     }
     if ($_SESSION['id'] != null && isset($_GET["id_game"])) { ?>
-        <a href="add-review.php?id_game=<?=$_GET["id_game"]?>"><button>ADD REVIEW</button></a>
+        <a href="add-review.php?id_game=<?= $_GET["id_game"] ?>"><button>ADD REVIEW</button></a>
     <?php
     }
     ?>
-    </table></div>
+    </table>
+    </div>
 </body>
 
 </html>
