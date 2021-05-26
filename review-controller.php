@@ -16,7 +16,6 @@ function getReviewByGameID($id_game)
         $data['name_user'] = $row["name_user"];
         $data['comment'] = $row["comment"];
         $data['likes_count'] = $row["likes_count"];
-        $data['created'] = $row['created'];
         array_push($reviewdata, $data);
     }
 
@@ -24,13 +23,13 @@ function getReviewByGameID($id_game)
     return $reviewdata;
 }
 
-function getReviewByNewerDate()
+function getReviewByNewer()
 {
     $allData = array();
     $conn = my_connectDB();
 
     if ($conn != NULL) {
-        $sql_query = "SELECT * FROM review ORDER BY created DESC";
+        $sql_query = "SELECT * FROM review ORDER BY id DESC";
         $result = mysqli_query($conn, $sql_query) or die(mysqli_error($conn));
 
         if ($result->num_rows > 0) {
@@ -42,7 +41,6 @@ function getReviewByNewerDate()
                 $data['name_user'] = $row["name_user"];
                 $data['comment'] = $row["comment"];
                 $data['likes_count'] = $row["likes_count"];
-                $data['created'] = $row["created"];
                 array_push($allData, $data);
             }
         }
@@ -56,7 +54,7 @@ function getReviewByLikes()
     $conn = my_connectDB();
 
     if ($conn != NULL) {
-        $sql_query = "SELECT * FROM review ORDER BY likes_count ASC";
+        $sql_query = "SELECT * FROM review ORDER BY likes_count DESC";
         $result = mysqli_query($conn, $sql_query) or die(mysqli_error($conn));
 
         if ($result->num_rows > 0) {
@@ -68,7 +66,6 @@ function getReviewByLikes()
                 $data['name_user'] = $row["name_user"];
                 $data['comment'] = $row["comment"];
                 $data['likes_count'] = $row["likes_count"];
-                $data['created'] = $row["created"];
                 array_push($allData, $data);
             }
         }
@@ -81,9 +78,8 @@ function createReview($id_game, $id_user, $name_game, $name_user, $comment)
     if ($comment != "") {
         $likes = 0;
         $conn = my_connectDB();
-        $created = timeDB();
-        $sql_query = "INSERT INTO review (id, id_game, id_user, name_game, name_user, comment, likes_count, created)
-                                        VALUES (NULL, '$id_game', '$id_user','$name_game','$name_user','$comment','$likes','$created');";
+        $sql_query = "INSERT INTO review (id, id_game, id_user, name_game, name_user, comment, likes_count)
+                                        VALUES (NULL, '$id_game', '$id_user','$name_game','$name_user','$comment','$likes');";
         echo $sql_query;
         $result = mysqli_query($conn, $sql_query) or die(mysqli_error($conn));
         my_closeDB($conn);

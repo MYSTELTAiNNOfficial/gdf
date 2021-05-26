@@ -22,13 +22,11 @@
             <td><?= $row['name_user'] ?></td>
             <td><?= $row['name_game'] ?></td>
             <td><?= $row['comment'] ?></td>
-            <?php if (!$_SESSION['id'] != null) { ?>
+            <?php if ($_SESSION['id'] != null) { ?>
                 <td><a href="likeaddprocess.php?id_comment=<?= $row['id'] ?>&id_game=<?= $row['id_game'] ?>"><?= $row['likes_count'] ?></td>
             <?php } else { ?>
                 <td><?= $row['likes_count'] ?></td>
             <?php } ?>
-            <td><a href="likeaddprocess.php?id_comment=<?= $row['id'] ?>&id_game=<?= $row['id_game'] ?>"><?= $row['likes_count'] ?></td>
-            <td><?= $row['created'] ?></td>
         </tr>
     <?php
     }
