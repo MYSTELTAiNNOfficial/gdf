@@ -26,8 +26,8 @@ if($_SESSION['title'] != "admin"){
                 <td><?= $row['id'] ?></td>
                 <td><?= $row['name'] ?></td>
                 <td><img src="<?= $row['img'] ?>"></td>
-                <td><a href="delete-game.php?deleteID= <?= $row['id'] ?>">Delete</a></td>
-                <td><a href="edit-game.php?updateID=<?= $row['id'] ?>">Update</a></td>
+                <td><a href="delete-game.php?deleteID=<?=$row['id']?>">Delete</a></td>
+                <td><a href="edit-game.php?updateID=<?=$row['id']?>">Update</a></td>
             </tr>
             <br>
             

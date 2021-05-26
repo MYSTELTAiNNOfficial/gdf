@@ -19,7 +19,7 @@ if ($_SESSION['title'] != "admin") {
     if (isset($_GET["deleteID"])) {
         $data_to_be_deleted = $_GET["deleteID"];
         $resultDelete = deleteGamelist($data_to_be_deleted);
-        echo $resultDelete;
+        header("Location: admin-edit.php?message=Delete game complete");
     }else{
         header("Location: admin-edit.php?error=Please Select the game first");
         exit();
