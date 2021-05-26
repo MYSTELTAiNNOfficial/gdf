@@ -24,7 +24,7 @@
                 <td><?= $row['name_user'] ?></td>
                 <td><?= $row['name_game'] ?></td>
                 <td><?= $row['comment'] ?></td>
-                <td><?= $row['likes_count'] ?></td>
+                <td><a href="likeaddprocess.php?id_comment=<?=$row['id']?>&id_game=<?=$row['id_game']?>"><?= $row['likes_count'] ?></td>
                 <td><?= $row['created'] ?></td>
             </tr>
         <?php
@@ -40,7 +40,7 @@
                 <td><?= $row['name_user'] ?></td>
                 <td><?= $row['name_game'] ?></td>
                 <td><?= $row['comment'] ?></td>
-                <td><?= $row['likes_count'] ?></td>
+                <td><a href="likeaddprocess.php?id_comment=<?=$row['id']?>&id_game=<?=$row['id_game']?>"><?= $row['likes_count'] ?></td>
                 <td><?= $row['created'] ?></td>
             </tr>
         <?php
