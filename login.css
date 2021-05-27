@@ -1,19 +1,38 @@
+body {
+    background-color: black;
+}
+
 #login {
-    position: relative;
+    color: white;
+    position: absolute;
     text-align: center;
-    margin: auto;
-    margin-top: 30%;
+    margin-left: 42vw;
+    margin-right: 42vw;
+    margin-top: 20vw;
     transition: 0.5s;
 }
 
 @media screen and (max-width: 800px) {
     #login {
-        margin-top: 55%;
+        margin-left: 32vw;
+        margin-right: 32vw;
+        margin-top: 40vw;
     }
 }
 
 @media screen and (max-width: 550px) {
     #login {
-        margin-top: 85%;
+        margin-left: 25vw;
+        margin-right: 25vw;
+        margin-top: 85vw;
+    }
+    #login h1 {
+        font-size: 4vw;
+    }
+    #login label {
+        font-size: 3vw;
+    }
+    #login .input {
+        width: 16vw;
     }
 }

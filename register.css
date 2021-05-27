@@ -1,19 +1,38 @@
+body {
+    background-color: black;
+}
+
 #register {
-    position: relative;
+    color: white;
+    position: absolute;
     text-align: center;
-    margin: auto;
-    margin-top: 30%;
+    margin-left: 44vw;
+    margin-right: 44vw;
+    margin-top: 10vw;
     transition: 0.5s;
 }
 
 @media screen and (max-width: 800px) {
     #register {
-        margin-top: 55%;
+        margin-left: 35vw;
+        margin-right: 35vw;
+        margin-top: 33vw;
     }
 }
 
 @media screen and (max-width: 550px) {
     #register {
-        margin-top: 85%;
+        margin-left: 35vw;
+        margin-right: 35vw;
+        margin-top: 80vw;
+    }
+    #register h1 {
+        font-size: 4vw;
+    }
+    #register label {
+        font-size: 3vw;
+    }
+    #register .input {
+        width: 20vw;
     }
 }

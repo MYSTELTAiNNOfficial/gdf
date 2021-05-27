@@ -12,25 +12,37 @@
 </head>
 
 <body>
+    <h1><b>All Popular Review</h1></b>
     <?php
     $test = getReviewByLikes();
-    echo "<div id='tablereview'><h1>Review</h1>
-        <table border='1' cellspacing='0'>";
+    echo "<div id='allreview'>
+    ";
     foreach ($test as $row) {
     ?>
-        <tr>
-            <td><?= $row['name_user'] ?></td>
-            <td><?= $row['name_game'] ?></td>
-            <td><?= $row['comment'] ?></td>
+        <div id='review'>
+            <div class="user">
+                <p><?= $row['name_user'] ?></p>
+            </div>
+            <div class="game">
+                <h4><?= $row['name_game'] ?></h4>
+            </div>
+            <div class="comment">
+                <p><?= $row['comment'] ?></p>
+            </div>
             <?php if ($_SESSION['id'] != null) { ?>
-                <td><a href="likeaddprocess.php?id_comment=<?= $row['id'] ?>&id_game=<?= $row['id_game'] ?>"><?= $row['likes_count'] ?></td>
+                <div class="like">
+                    <p><a href="likeaddprocess.php?id_comment=<?= $row['id'] ?>&id_game=<?= $row['id_game'] ?>"><?= $row['likes_count'] ?></a></p>
+                </div>
             <?php } else { ?>
-                <td><?= $row['likes_count'] ?></td>
+                <div class="like">
+                    <p><?= $row['likes_count'] ?></p>
+                </div>
             <?php } ?>
-        </tr>
+        </div>
     <?php
     }
     ?>
+    </div>
 </body>
 
 </html>

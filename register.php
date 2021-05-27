@@ -13,30 +13,31 @@ if($_SESSION['username'] !== null){
 </head>
 <body>
     <div id="register">
+        <H1><b>REGISTER</b></H1>
     <form action="registerproses.php" method="POST" enctype="multipart/form-data">
             <label for="Username"><b>Username</b></label>
             <br>
-            <input type="text" placeholder="Enter Username" name="username" required>
+            <input class="input" type="text" placeholder="Enter Username" name="username" required>
             <br>
             <label for="email"><b>Email</b></label>
             <br>
-            <input type="text" placeholder="Enter Email" name="email" required>
+            <input class="input" type="text" placeholder="Enter Email" name="email" required>
             <br>
             <label for="password"><b>Password</b></label>
             <br>
-            <input type="password" placeholder="Enter Password" name="password" required>
+            <input class="input" type="password" placeholder="Enter Password" name="password" required>
             <br>
             <label for="password2"><b>Confirm your Password</b></label>
             <br>
-            <input type="password" placeholder="Confirm your Password" name="password2" required>
+            <input class="input" type="password" placeholder="Confirm your Password" name="password2" required>
             <br>
             <label for="Hobby"><b>Hobby</b></label>
             <br>
-            <input type="text" placeholder="Enter your Hobby" name="hobby">
+            <input class="input" type="text" placeholder="Enter your Hobby" name="hobby">
             <br>
             <label for="birthday"><b>Birthday</b></label>
             <br>
-            <input type="date" placeholder="Enter your Birthday" name="birthday">
+            <input class="input" type="date" placeholder="Enter your Birthday" name="birthday">
             <br><br>
             <input type="submit" value="SUBMIT">
     </form>

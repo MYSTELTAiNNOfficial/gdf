@@ -1,9 +1,28 @@
-#tablereview {
+body {
+    background-color: black;
+}
+
+#allreview {
+    position: absolute;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 20%;
+    transition: 0.5s;
+    width: 80vw;
+}
+
+#review {
+    background-color: cyan;
+}
+
+h1 {
+    font-size: 2.2vw;
+    color: white;
     position: absolute;
     text-align: center;
-    margin-left: 30vw;
-    margin-right: auto;
-    margin-top: 20%;
+    margin-left: 40vw;
+    margin-right: 40vw;
+    margin-top: 15vw;
     transition: 0.5s;
 }
 

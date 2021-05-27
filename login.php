@@ -14,16 +14,17 @@ if($_SESSION['username'] != null){
 
 <body>
     <div id="login">
+    <h1><b>LOGIN</b></h1>
         <form action="loginprocess.php" method="POST" enctype="multipart/form-data">
             <label for="username"><b>Username</b></label>
             <br>
-            <input type="text" placeholder="Enter Username" name="username" required>
+            <input class="input" type="text" placeholder="Enter Username" name="username" required>
             <br>
             <label for="password"><b>Password</b></label>
             <br>
-            <input type="password" placeholder="Enter Password" name="password" required>
+            <input class="input" type="password" placeholder="Enter Password" name="password" required>
             <br><br>
-            <input type="submit" value="SUBMIT">
+            <input type="submit" value="Login">
         </form>
         <br>
         <br>

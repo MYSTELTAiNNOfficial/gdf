@@ -22,10 +22,10 @@ $destination_path = getcwd() . DIRECTORY_SEPARATOR . $folder;
         <?php echo '<img src="' . $folder . "G.D-Logo.png" . '"></img>'; ?>
         <h2>Game Discussion Forum</h2>
         <?php
-        if (!$_SESSION['username']==null){ ?>
-            <p>Welcome, <?=$_SESSION['username']?>!</p>
+        if (!$_SESSION['username'] == null) { ?>
+            <p>Welcome, <?= $_SESSION['username'] ?>!</p>
         <?php
-        } else {?>
+        } else { ?>
             <p>Welcome, Guest!</p>
         <?php
         }
@@ -42,17 +42,19 @@ $destination_path = getcwd() . DIRECTORY_SEPARATOR . $folder;
         <a href="#">ABOUT</a>
         <a href="#">CONTACT US</a>
         <?php
-        if ($_SESSION['title'] == "admin"){?>
+        if ($_SESSION['title'] == "admin") { ?>
+            <a href="myprofile.php">My Profile</a>
             <a href="admin-edit.php">Admin Control</a>
             <a href="logout.php">Logout</a>
         <?php
-        }else if ($_SESSION['title']=="user"){?>
+        } else if ($_SESSION['title'] == "user") { ?>
+            <a href="myprofile.php">My Profile</a>
             <a href="logout.php">Logout</a>
         <?php
-        }else if ($_SESSION['title']==null){?>
+        } else if ($_SESSION['title'] == null) { ?>
             <a href="login.php">Login</a>
         <?php
-    }?>
+        } ?>
     </div>
 
 
@@ -60,7 +62,7 @@ $destination_path = getcwd() . DIRECTORY_SEPARATOR . $folder;
         /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
         function openNav() {
             document.getElementById("mySidenav").style.width = "25%";
-            if(screen.availWidth <= 700){
+            if (screen.availWidth <= 700) {
                 document.getElementById("mySidenav").style.width = "30%";
             }
         }
@@ -71,6 +73,7 @@ $destination_path = getcwd() . DIRECTORY_SEPARATOR . $folder;
             document.getElementById("mySidenav").style.paddingRight = "0";
         }
     </script>
-    
+
 </body>
+
 </html>
