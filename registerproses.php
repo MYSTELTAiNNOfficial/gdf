@@ -4,8 +4,8 @@
 if (isset($_POST['username'])) {
     $user = $_POST['username'];
     $email = $_POST['email'];
-    $pass = $_POST['password'];
-    $pass2 = $_POST['password2'];
+    $pass = md5(md5($_POST['password']));
+    $pass2 = md5(md5($_POST['password2']));
     $birth = $_POST['birthday'];
     $hobby = $_POST['hobby'];
     $title = "user";

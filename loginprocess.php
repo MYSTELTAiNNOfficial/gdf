@@ -12,7 +12,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         return $data;
     }
     $uname = validate($_POST['username']);
-    $pass = validate($_POST['password']);
+    $pass = validate(md5(md5($_POST['password'])));
     if (empty($uname)) {
         header("Location: login.php?error=Username is required");
         exit();
