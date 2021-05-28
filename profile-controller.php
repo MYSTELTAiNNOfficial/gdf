@@ -13,6 +13,20 @@ function getProfilebyUserandPass($uname, $pass)
     my_closeDB($conn);   
 }
 
+function checkUsedUserEmail($user, $email){
+    $used = false;
+    $conn = my_connectDB();
+    $sql_query = "SELECT id FROM profile WHERE username = '$user' OR email = '$email'";
+    $result = mysqli_query($conn, $sql_query) or die(mysqli_error($conn));
+    if ($result->num_rows > 0) {
+        $used = true;
+    }else{
+        $used = false;
+    }
+    my_closeDB($conn); 
+    return $used;
+}
+
 function readProfile()
 {
     $allData = array();
