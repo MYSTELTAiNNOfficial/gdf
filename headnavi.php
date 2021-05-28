@@ -61,10 +61,7 @@ $destination_path = getcwd() . DIRECTORY_SEPARATOR . $folder;
     <script>
         /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
         function openNav() {
-            document.getElementById("mySidenav").style.width = "25%";
-            if (screen.availWidth <= 700) {
-                document.getElementById("mySidenav").style.width = "30%";
-            }
+            document.getElementById("mySidenav").style.width = "25vw";
         }
 
         /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
