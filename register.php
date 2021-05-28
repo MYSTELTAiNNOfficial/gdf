@@ -1,5 +1,4 @@
 <?php include_once("headnavi.php");
-session_start();
 if($_SESSION['username'] !== null){
     header("Location: index.php?error=You has been login-ed, please logout first");
     exit();

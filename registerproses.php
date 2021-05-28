@@ -1,7 +1,7 @@
 <?php include_once("profile-controller.php");
 
 
-if(isset($_POST['username'])){
+if (isset($_POST['username'])) {
     $user = $_POST['username'];
     $email = $_POST['email'];
     $pass = $_POST['password'];
@@ -10,17 +10,20 @@ if(isset($_POST['username'])){
     $hobby = $_POST['hobby'];
     $title = "user";
 
-    if($user && $email && $pass && $birth && $hobby){
-            if($pass === $pass2){
-                createProfile( $user, $email, $birth, $pass, $hobby, $title);
-                header("Location : login.php");
-            }else{
-                $message = "Password is not same..";
-                header("Location: register.php?error=$message");
+    if ($user && $email && $pass && $birth && $hobby) {
+        $check = checkUsedUserEmail($user, $email);
+        if ($check == false) {
+            if ($pass == $pass2) {
+                createProfile($user, $email, $birth, $pass, $hobby, $title);
+                header("Location:login.php");
+            } else {
+                header("Location:register.php?error=Password is not same..");
             }
-    }else{
+        } else {
+            header("Location:register.php?error=Username or Email has been used");
+        }
+    } else {
         echo "error";
     }
 }
-
 ?>
