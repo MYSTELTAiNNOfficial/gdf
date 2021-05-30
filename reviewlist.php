@@ -46,7 +46,7 @@
         echo "</div>";
     } else {
         $test = getReviewByNewer();
-        echo "<div id='tablereview'>
+        echo "
         <h1>Review</h1>
         <div id='allreview'>";
         foreach ($test as $row) {
@@ -74,14 +74,14 @@
         <?php
         }
         echo "</div>";
-    }
-    if ($_SESSION['id'] != null && isset($_GET["id_game"])) { ?>
-        <a href="add-review.php?id_game=<?= $_GET["id_game"] ?>"><button>ADD REVIEW</button></a>
+    }?>
+    </table>
+    </div>
+    <?php if ($_SESSION['id'] != null && isset($_GET["id_game"])) { ?>
+        <a id="addbutton" href="add-review.php?id_game=<?= $_GET["id_game"] ?>"><button>ADD REVIEW</button></a>
     <?php
     }
     ?>
-    </table>
-    </div>
 </body>
 
 </html>

@@ -35,3 +35,8 @@ h1 {
     transition: 0.5s;
     color: white;
 }
+
+#addbutton {
+    position: absolute;
+    right: 8vw;
+}
