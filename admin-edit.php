@@ -20,16 +20,19 @@ if($_SESSION['title'] != "admin"){
     <button onclick="location.href='add-game.php'">Add new game</button>
     <br>
 <div id="gamelist">
-    <table border="1" cellspacing="0">
+    <table>
         <?php
         $result = readGamelist();
         foreach ($result as $row) {
         ?>
             <tr>
-                <td><?= $row['id'] ?></td>
-                <td><?= $row['name'] ?></td>
-                <td><img src="<?= $row['img'] ?>"></td>
-                <td><a href="delete-game.php?deleteID=<?=$row['id']?>">Delete</a></td>
+                <td colspan="2">ID.<?= $row['id'] ?> <?= $row['name'] ?></td>
+                <tr>
+                    <td colspan="2"><img src="<?= $row['img'] ?>"></td>
+                </tr>
+            </tr>
+            <tr>
+            <td><a href="delete-game.php?deleteID=<?=$row['id']?>">Delete</a></td>
                 <td><a href="edit-game.php?updateID=<?=$row['id']?>">Update</a></td>
             </tr>
         <?php

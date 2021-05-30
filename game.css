@@ -14,6 +14,7 @@ h1 {
     float: left;
     margin-top: 25vw;
     transition: 0.5s;
+    color: white;
 }
 
 table,
