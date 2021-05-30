@@ -15,8 +15,11 @@ if($_SESSION['title'] != "admin"){
 </head>
 
 <body>
-<div id="gamelist">
     <h1>Admin Control</h1>
+    <br>
+    <button onclick="location.href='add-game.php'">Add new game</button>
+    <br>
+<div id="gamelist">
     <table border="1" cellspacing="0">
         <?php
         $result = readGamelist();
@@ -29,13 +32,11 @@ if($_SESSION['title'] != "admin"){
                 <td><a href="delete-game.php?deleteID=<?=$row['id']?>">Delete</a></td>
                 <td><a href="edit-game.php?updateID=<?=$row['id']?>">Update</a></td>
             </tr>
-            <br>
-            
         <?php
         }
         ?>
+        <br>
     </table>
-    <button onclick="location.href='add-game.php'">Add new game</button>
 </div>
 </body>
 

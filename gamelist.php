@@ -13,19 +13,24 @@
 <body>
 <div id="gamelist">
     <h1>Gamelist</h1>
-    <table border="1" cellspacing="0">
+    <div>
         <?php
         $result = readGamelist();
         foreach ($result as $row) {
         ?>
+        <table id="content">
             <tr>
-                <td><a href="reviewlist.php?id_game=<?= $row['id'] ?>"><?= $row['name'] ?></td>
-                <td><img src="<?= $row['img'] ?>"></td>
+                <td id="name"><a href="reviewlist.php?id_game=<?= $row['id'] ?>"><?= $row['name'] ?>
+                    <tr>
+                        <td><img src="<?= $row['img'] ?>"></td>
+                    </tr>
+                </td>
             </tr>
+        </table>
         <?php
         }
         ?>
-    </table>
+    </div>
 </div>
 </body>
 
