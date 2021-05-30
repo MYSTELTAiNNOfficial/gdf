@@ -1,4 +1,26 @@
-body {}
+body {
+    background-color: black;
+}
+
+#about {
+    background-color: white;
+    width: 80vw;
+    margin-top: 10vw;
+    margin-left: 10vw;
+}
+
+#contact {
+    background-color: white;
+    width: 80vw;
+    margin-top: 10vw;
+    margin-left: 10vw;
+}
+
+table,
+td,
+tr {
+    border: 2px solid black;
+}
 
 #header {
     background-color: black;

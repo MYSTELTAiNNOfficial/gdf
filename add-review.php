@@ -24,8 +24,8 @@ if ($_SESSION['title'] == null) {
         echo $_SESSION['id'];
         echo $_SESSION['username'];
     ?>
+    <h1>Add a new review in Game <?= $data['name'] ?></h1>
         <div id="formaddreview">
-            <h1>Add a new review in Game <?= $data['name'] ?></h1>
 
             <form action="addreviewprocess.php" method="POST" enctype="multipart/form-data">
                 <label for="gameid"><b>Game ID</b></label>

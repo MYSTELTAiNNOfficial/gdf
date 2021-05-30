@@ -12,7 +12,7 @@ body {
 }
 
 #review {
-    background-color: cyan;
+    background-color: white;
 }
 
 h1 {
@@ -29,8 +29,9 @@ h1 {
 #formaddreview {
     position: absolute;
     text-align: center;
-    margin-left: 30vw;
+    margin-left: 42vw;
     margin-right: auto;
-    margin-top: 20%;
+    margin-top: 25vw;
     transition: 0.5s;
+    color: white;
 }

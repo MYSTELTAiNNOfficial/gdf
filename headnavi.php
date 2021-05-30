@@ -39,8 +39,8 @@ $destination_path = getcwd() . DIRECTORY_SEPARATOR . $folder;
         <a href="index.php">HOME</a>
         <a href="gamelist.php">GAMES</a>
         <a href="reviewlist.php">REVIEW</a>
-        <a href="#">ABOUT</a>
-        <a href="#">CONTACT US</a>
+        <a href="about.php">ABOUT</a>
+        <a href="contactus.php">CONTACT US</a>
         <?php
         if ($_SESSION['title'] == "admin") { ?>
             <a href="myprofile.php">My Profile</a>
