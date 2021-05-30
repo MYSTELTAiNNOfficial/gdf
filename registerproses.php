@@ -10,7 +10,7 @@ if (isset($_POST['username'])) {
     $hobby = $_POST['hobby'];
     $title = "user";
 
-    if ($user && $email && $pass && $birth && $hobby) {
+    if ($user && $email && $pass && $birth) {
         $check = checkUsedUserEmail($user, $email);
         if ($check == false) {
             if ($pass == $pass2) {
