@@ -15,11 +15,11 @@ if($_SESSION['title'] != "admin"){
 </head>
 
 <body>
+<div id="gamelist">
     <h1>Admin Control</h1>
     <br>
     <button onclick="location.href='add-game.php'">Add new game</button>
     <br>
-<div id="gamelist">
     <table>
         <?php
         $result = readGamelist();
