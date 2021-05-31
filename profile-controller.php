@@ -82,7 +82,6 @@ function deleteProfile($id)
     return $result;
 }
 
-//function to get data from profile
 function getProfile($id)
 {
     $data = array();
@@ -107,7 +106,6 @@ function getProfile($id)
     }
 }
 
-//function to update data from game
 function updateProfile($id, $user, $email, $birth, $pass, $hobby, $title)
 {
     $conn = my_connectDB();

@@ -1,6 +1,6 @@
 <?php
 include_once("headnavi.php");
-if($_SESSION['id'] == null){
+if ($_SESSION['id'] == null) {
     header("Location: index.php?error=You dont have permission, Login first");
     exit();
 }
@@ -15,9 +15,10 @@ if($_SESSION['id'] == null){
     <link rel="stylesheet" href="myprofile.css?v=<?php echo time(); ?>">
     <title>Edit Profile</title>
 </head>
+
 <body>
-<div id="editprofile">
-<form action="edituserprocess.php" method="POST" enctype="multipart/form-data">
+    <div id="editprofile">
+        <form action="edituserprocess.php" method="POST" enctype="multipart/form-data">
             <label for="id"><b>ID User: </b></label>
             <input class="input" type="text" placeholder="<?= $_SESSION['id'] ?>" name="id" readonly>
             <br>
@@ -37,10 +38,10 @@ if($_SESSION['id'] == null){
             <input class="input" type="date" placeholder="<?= $_SESSION['birthday'] ?>" name="birthday">
             <br>
             <input type="submit" value="Submit" name="SUBMIT">
-    </form>
+        </form>
     </div>
-<!-- <div id="editprofile">
-    <p>ID User:&emsp;&nbsp;<?=$_SESSION['id']?></p>
+    <!-- <div id="editprofile">
+    <p>ID User:&emsp;&nbsp;<?= $_SESSION['id'] ?></p>
     <p>Username:&nbsp;<?= $_SESSION['username'] ?></p>
     <p>Email:&emsp;&emsp;<?= $_SESSION['email'] ?></p>
     <p>Hobby:&emsp;&ensp;&nbsp;<?= $_SESSION['hobby'] ?></p>
