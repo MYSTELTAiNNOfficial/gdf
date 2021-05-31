@@ -5,7 +5,7 @@ function readGamelist()
 {
     $allData = array();
     $conn = my_connectDB();
-    $sql_query = "SELECT * FROM uas.game";
+    $sql_query = "SELECT * FROM game";
     $result = mysqli_query($conn, $sql_query) or die(mysqli_error($conn));
 
     if ($result->num_rows > 0) {
