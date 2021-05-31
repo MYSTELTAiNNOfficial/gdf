@@ -20,11 +20,11 @@ if($_SESSION['title'] != "admin"){
     <br>
     <button id="addgame" onclick="location.href='add-game.php'">Add new game</button>
     <br>
-    <table>
         <?php
         $result = readGamelist();
         foreach ($result as $row) {
         ?>
+        <table id="tabelgame">
             <tr>
                 <td colspan="2">ID.<?= $row['id'] ?> <?= $row['name'] ?></td>
                 <tr>
@@ -35,18 +35,18 @@ if($_SESSION['title'] != "admin"){
                 <td><a href="delete-game.php?deleteID=<?=$row['id']?>">Delete</a></td>
                 <td><a href="edit-game.php?updateID=<?=$row['id']?>">Update</a></td>
             </tr>
+            </table>
         <?php
         }
         ?>
         <br>
-    </table>
 </div>
 <div id="userlist">
         <?php
         $result = readProfile();
         foreach ($result as $row){
         ?>
-            <table>
+            <table id="tabeluser">
                 <tr>
                     <td>
                         <p>ID User: <?=$row['id']?></p>

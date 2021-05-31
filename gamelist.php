@@ -11,9 +11,8 @@
 </head>
 
 <body>
-<div id="gamelist">
-    <h1>Gamelist</h1>
-    <div>
+    <h1 id="titlegame">Gamelist</h1>
+    <div  id="game">
         <?php
         $result = readGamelist();
         foreach ($result as $row) {
@@ -31,7 +30,6 @@
         }
         ?>
     </div>
-</div>
 </body>
 
 </html>
