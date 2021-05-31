@@ -63,12 +63,11 @@ td {
 
 #userlist {
     float: right;
-    width: 30vw;
+    width: 20vw;
     border: 2px solid black;
     background-color: white;
-    width: 30vw;
-    margin-top: 4vw;
-    margin-right: 5vw;
+    margin-top: 5vw;
+    margin-right: 10vw;
 }
 
 #titleAdmin {

@@ -50,10 +50,10 @@ if($_SESSION['title'] != "admin"){
                 <tr>
                     <td>
                         <p>ID User: <?=$row['id']?></p>
-                        <p>Username: <?= $row['username'] ?></p>
+                        <p>Username: <?= $row['user'] ?></p>
                         <p>Email: <?= $row['email'] ?></p>
                         <p>Hobby: <?= $row['hobby'] ?></p>
-                        <p>Birthday: <?= $row['birthday'] ?></p>
+                        <p>Birthday: <?= $row['birth'] ?></p>
                         <p>Title: <?= $row['title']?></p>
                         <p id="deleteuser"><a href="delete-user.php?deleteID=<?=$row['id']?>">Delete</a></p>
                     </td>
