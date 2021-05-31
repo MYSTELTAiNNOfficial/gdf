@@ -15,10 +15,10 @@ if($_SESSION['title'] != "admin"){
 </head>
 
 <body>
+    <h1 id="titleAdmin">Admin Control</h1>
 <div id="gamelist">
-    <h1>Admin Control</h1>
     <br>
-    <button onclick="location.href='add-game.php'">Add new game</button>
+    <button id="addgame" onclick="location.href='add-game.php'">Add new game</button>
     <br>
     <table>
         <?php
@@ -32,7 +32,7 @@ if($_SESSION['title'] != "admin"){
                 </tr>
             </tr>
             <tr>
-            <td><a href="delete-game.php?deleteID=<?=$row['id']?>">Delete</a></td>
+                <td><a href="delete-game.php?deleteID=<?=$row['id']?>">Delete</a></td>
                 <td><a href="edit-game.php?updateID=<?=$row['id']?>">Update</a></td>
             </tr>
         <?php
@@ -40,6 +40,28 @@ if($_SESSION['title'] != "admin"){
         ?>
         <br>
     </table>
+</div>
+<div id="userlist">
+        <?php
+        $result = readProfile();
+        foreach ($result as $row){
+        ?>
+            <table>
+                <tr>
+                    <td>
+                        <p>ID User: <?=$row['id']?></p>
+                        <p>Username: <?= $row['username'] ?></p>
+                        <p>Email: <?= $row['email'] ?></p>
+                        <p>Hobby: <?= $row['hobby'] ?></p>
+                        <p>Birthday: <?= $row['birthday'] ?></p>
+                        <p>Title: <?= $row['title']?></p>
+                        <p id="deleteuser"><a href="delete-user.php?deleteID=<?=$row['id']?>">Delete</a></p>
+                    </td>
+                </tr>
+            </table>
+        <?php
+        }
+        ?>
 </div>
 </body>
 

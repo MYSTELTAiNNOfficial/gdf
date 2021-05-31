@@ -15,7 +15,16 @@ if($_SESSION['title'] != "admin"){
     <title>Delete User | GDF</title>
 </head>
 <body>
+<h1>Delete User Data</h1>
     <?php
+    if (isset($_GET["deleteID"])) {
+        $data_to_be_deleted = $_GET["deleteID"];
+        $resultDelete = deleteProfile($data_to_be_deleted);
+        header("Location: admin-edit.php?message=Delete user complete");
+    }else{
+        header("Location: admin-edit.php?error=Please Select the user first");
+        exit();
+    }
 
     ?>
 </body>
