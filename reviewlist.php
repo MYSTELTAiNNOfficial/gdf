@@ -78,7 +78,7 @@
     </table>
     </div>
     <?php if ($_SESSION['id'] != null && isset($_GET["id_game"])) { ?>
-        <a id="addbutton" href="add-review.php?id_game=<?= $_GET["id_game"] ?>"><button>ADD REVIEW</button></a>
+        <a href="add-review.php?id_game=<?= $_GET["id_game"] ?>"><button id="addbutton">ADD REVIEW</button></a>
     <?php
     }
     ?>

@@ -59,7 +59,7 @@ td {
     text-align: center;
     margin: auto;
     margin-top: 3vw;
-    margin-left: 5vw;
+    margin-left: 10vw;
     transition: 0.5s;
 }
 
@@ -96,7 +96,7 @@ td {
 }
 
 #addgame {
-    margin-left: 2vw;
+    margin-top: 5vw;
 }
 
 #deleteuser {

@@ -16,10 +16,8 @@ if($_SESSION['title'] != "admin"){
 
 <body>
     <h1 id="titleAdmin">Admin Control</h1>
-<div id="gamelist">
-    <br>
     <button id="addgame" onclick="location.href='add-game.php'">Add new game</button>
-    <br>
+<div id="gamelist">
         <?php
         $result = readGamelist();
         foreach ($result as $row) {

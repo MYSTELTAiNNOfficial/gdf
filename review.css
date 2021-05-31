@@ -37,6 +37,5 @@ h1 {
 }
 
 #addbutton {
-    position: absolute;
-    right: 8vw;
+    margin-top: 5vw;
 }
