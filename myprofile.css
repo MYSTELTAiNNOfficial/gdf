@@ -22,5 +22,10 @@ body {
     margin-left: 10vw;
     font-size: 1.5vw;
     border: 5px solid white;
-    width: 20vw;
+    width: 50vw;
+}
+
+#editprofile button {
+    margin-top: 0.5vw;
+    margin-left: 46vw;
 }
