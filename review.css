@@ -14,6 +14,9 @@ body {
 #review {
     background-color: white;
     border-radius: 10px;
+    margin-left: 1vw;
+    padding: 0.5vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 h1 {
@@ -39,4 +42,21 @@ h1 {
 
 #addbutton {
     margin-top: 5vw;
+}
+
+#reviewcontent {
+    width: 75vw;
+    margin-bottom: 1vw;
+    margin-left: 1vw;
+}
+
+#reviewuser {
+    width: 40vw;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    margin-left: 1vw;
+}
+
+#like {
+    align-content: flex-end;
 }
