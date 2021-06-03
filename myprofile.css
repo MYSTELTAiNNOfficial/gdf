@@ -9,7 +9,8 @@ body {
     margin-left: 10vw;
     font-size: 1.5vw;
     border: 5px solid white;
-    width: 20vw;
+    width: fit-content;
+    padding: 2vw;
 }
 
 .edit {
@@ -23,15 +24,42 @@ body {
     font-size: 1.5vw;
     border: 5px solid white;
     width: 50vw;
+    padding: 3vw;
 }
 
-#editprofile button {
-    margin-top: 0.5vw;
-    margin-left: 46vw;
+#editprofile .button {
+    width: fit-content;
+    font-size: 1vw;
 }
 
 #edit {
-    position: absolute;
-    top: 30vw;
-    left: 25vw;
+    position: relative;
+    margin-top: 35vw;
+    margin-left: -6vw;
+    width: 6vw;
+    font-size: 1vw;
+}
+
+@media screen and (max-width: 640px) {
+    #profile {
+        margin-top: 50vw;
+        margin-left: 10vw;
+        font-size: 3vw;
+        width: fit-content;
+        padding: 2vw;
+    }
+    #edit {
+        margin-top: 95vw;
+        margin-left: -16vw;
+        width: 16vw;
+        font-size: 2.5vw;
+    }
+    #editprofile {
+        margin-top: 50vw;
+        font-size: 3vw;
+        width: 70vw;
+    }
+    #editprofile .button {
+        font-size: 2vw;
+    }
 }

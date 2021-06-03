@@ -37,16 +37,10 @@ if ($_SESSION['id'] == null) {
             <label for="birthday"><b>Birthday</b></label>
             <input class="input" type="date" placeholder="<?= $_SESSION['birthday'] ?>" name="birthday">
             <br>
-            <input type="submit" value="Submit" name="SUBMIT">
+            <br>
+            <input class="button" type="submit" value="Submit" name="SUBMIT">
         </form>
     </div>
-    <!-- <div id="editprofile">
-    <p>ID User:&emsp;&nbsp;<?= $_SESSION['id'] ?></p>
-    <p>Username:&nbsp;<?= $_SESSION['username'] ?></p>
-    <p>Email:&emsp;&emsp;<?= $_SESSION['email'] ?></p>
-    <p>Hobby:&emsp;&ensp;&nbsp;<?= $_SESSION['hobby'] ?></p>
-    <p>Birthday:&emsp;<?= $_SESSION['birthday'] ?></p>
-</div> -->
 </body>
 
 </html>

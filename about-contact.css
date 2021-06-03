@@ -15,6 +15,8 @@
 #about {
     padding: 1vw;
     border-radius: 1vw;
+    margin-top: 15vw;
+    margin-left: 7.5vw;
 }
 
 #contact {
@@ -42,5 +44,8 @@
     #contact {
         margin-top: 60vw;
         margin-left: 7.5vw;
+    }
+    #about {
+        margin-top: 50vw;
     }
 }

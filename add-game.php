@@ -21,13 +21,16 @@ if($_SESSION['title'] != "admin"){
                 <label for="gametitle"><b>Game Title</b></label>
                 <br>
                 <input type="text" placeholder="Enter Title" name="name" required>
-                <br>
+                <br><br>
                 <label for="image"><b>Game Cover Image</b></label>
                 <br>
                 <input type="file" name="img" accept="img/*" required>
                 <br><br>
                 <input type="submit" value="Upload">
             </form>
+            <br>
+            <BR>
+            <BR>
         <button onclick="location.href='admin-edit.php'">Back to admin control</button>
     </div>
 </body>

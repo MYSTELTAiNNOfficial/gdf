@@ -7,14 +7,18 @@ h1 {
 }
 
 #formCreate {
-    position: absolute;
     text-align: center;
-    margin-left: 38vw;
-    margin-right: 38vw;
-    float: left;
-    margin-top: 25vw;
+    margin-top: 20vw;
     transition: 0.5s;
     color: white;
+}
+
+#formCreate form {
+    font-size: 1.2vw;
+}
+
+#formCreate input {
+    font-size: 0.8vw;
 }
 
 table,
@@ -29,8 +33,8 @@ td {
 }
 
 #titlegame {
-    margin-top: 10vw;
-    margin-left: 45vw;
+    text-align: center;
+    margin-top: 15vw;
 }
 
 #content {
@@ -76,11 +80,8 @@ td {
 }
 
 #formEdit {
-    position: relative;
     text-align: center;
-    margin: auto;
     margin-top: 20vw;
-    margin-left: 5vw;
     transition: 0.5s;
 }
 
@@ -132,25 +133,31 @@ td {
 
 @media screen and (max-width: 640px) {
     #formCreate {
-        position: absolute;
         text-align: center;
-        margin-left: 38vw;
-        margin-right: 38vw;
-        float: left;
-        margin-top: 25vw;
+        margin-top: 40vw;
         transition: 0.5s;
         color: white;
+    }
+    #formCreate form {
+        font-size: 4vw;
+    }
+    #formCreate input {
+        font-size: 2vw;
+    }
+    h1 {
+        font-size: 4vw;
+        margin-top: 20vw;
     }
     #name {
         font-size: 2vw;
     }
     #titlegame {
-        margin-top: 10vw;
-        margin-left: 45vw;
+        margin-top: 45vw;
+        font-size: 5vw;
     }
     #content {
         float: left;
-        margin-left: 2vw;
+        margin-left: 10vw;
         width: 10vw;
         height: auto;
         margin-top: 3vw;
@@ -171,7 +178,7 @@ td {
         position: relative;
         text-align: center;
         margin: auto;
-        margin-top: 20vw;
+        margin-top: 25vw;
         margin-left: 7.5vw;
         transition: 0.5s;
         font-family: 'Times New Roman', Times, serif;
@@ -186,18 +193,13 @@ td {
         height: 35vw;
     }
     #formEdit {
-        position: relative;
-        text-align: center;
-        margin: auto;
-        margin-top: 20vw;
-        margin-left: 5vw;
-        transition: 0.5s;
+        margin-top: 40vw;
     }
     #userlist {
         float: right;
         width: 20vw;
         border: 2px solid black;
-        margin-top: 20vw;
+        margin-top: 25vw;
         margin-right: 16vw;
         font-family: sans-serif;
         font-size: 1.5vw;
@@ -208,8 +210,7 @@ td {
         margin-bottom: 5vw;
     }
     #addgame {
-        position: absolute;
-        top: 13vw;
+        top: 40vw;
         left: 10.6vw;
     }
     #deleteuser {
