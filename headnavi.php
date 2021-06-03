@@ -32,7 +32,7 @@ $destination_path = getcwd() . DIRECTORY_SEPARATOR . $folder;
         ?>
     </div>
 
-    <button onclick="openNav()">open</button>
+    <img src="<?=$folder?>Navi_Icon.png" onclick="openNav()" id="iconnavi"></img>
 
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -61,7 +61,10 @@ $destination_path = getcwd() . DIRECTORY_SEPARATOR . $folder;
     <script>
         /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
         function openNav() {
-            document.getElementById("mySidenav").style.width = "25vw";
+            document.getElementById("mySidenav").style.width = "20vw";
+            if (screen.availWidth < 640){
+                document.getElementById("mySidenav").style.width = "40vw";
+            }
         }
 
         /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
