@@ -6,25 +6,16 @@ body {
     color: white;
     position: absolute;
     text-align: center;
-    margin-left: 42vw;
-    margin-right: 42vw;
-    margin-top: 20vw;
+    left: 6.5vw;
+    right: 10vw;
+    top: 20vw;
     transition: 0.5s;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 640px) {
     #login {
-        margin-left: 32vw;
-        margin-right: 32vw;
-        margin-top: 40vw;
-    }
-}
-
-@media screen and (max-width: 550px) {
-    #login {
-        margin-left: 25vw;
-        margin-right: 25vw;
-        margin-top: 85vw;
+        left: 10vw;
+        top: 65vw;
     }
     #login h1 {
         font-size: 4vw;
@@ -33,6 +24,6 @@ body {
         font-size: 3vw;
     }
     #login .input {
-        width: 16vw;
+        width: 40vw;
     }
 }

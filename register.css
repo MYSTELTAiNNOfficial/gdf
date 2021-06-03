@@ -6,25 +6,16 @@ body {
     color: white;
     position: absolute;
     text-align: center;
-    margin-left: 44vw;
-    margin-right: 44vw;
-    margin-top: 10vw;
+    left: 6.5vw;
+    right: 10vw;
+    top: 20vw;
     transition: 0.5s;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 640px) {
     #register {
-        margin-left: 35vw;
-        margin-right: 35vw;
-        margin-top: 33vw;
-    }
-}
-
-@media screen and (max-width: 550px) {
-    #register {
-        margin-left: 35vw;
-        margin-right: 35vw;
-        margin-top: 80vw;
+        left: 10vw;
+        top: 65vw;
     }
     #register h1 {
         font-size: 4vw;
@@ -33,6 +24,6 @@ body {
         font-size: 3vw;
     }
     #register .input {
-        width: 20vw;
+        width: 40vw;
     }
 }
