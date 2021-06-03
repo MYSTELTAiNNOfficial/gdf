@@ -29,3 +29,9 @@ body {
     margin-top: 0.5vw;
     margin-left: 46vw;
 }
+
+#edit {
+    position: absolute;
+    top: 30vw;
+    left: 25vw;
+}

@@ -23,7 +23,7 @@ if ($_SESSION['username'] == null) {
     <p>Hobby:&emsp;&ensp;&nbsp;<?= $_SESSION['hobby'] ?></p>
     <p>Birthday:&emsp;<?= $_SESSION['birthday'] ?></p>
 </div>
-<button class="edit" onclick="location.href='edit-user.php'">Edit Profile</button>
+<button id="edit" onclick="location.href='edit-user.php'">Edit Profile</button>
 </body>
 
 </html>

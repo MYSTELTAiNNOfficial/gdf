@@ -1,0 +1,32 @@
+#contact img {
+    width: 20vw;
+    height: auto;
+}
+
+#contact pre {
+    font-family: sans-serif;
+}
+
+#comment {
+    width: 100vw;
+}
+
+#about {
+    padding: 1vw;
+    border-radius: 1vw;
+}
+
+#contact {
+    padding: 0.5vw;
+    border-radius: 1vw;
+}
+
+@media screen and (max-width: 640px) {
+    #contact img {
+        width: 20vw;
+        height: auto;
+    }
+    #comment {
+        width: 100vw;
+    }
+}
