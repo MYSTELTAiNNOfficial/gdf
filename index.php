@@ -19,26 +19,38 @@
     ";
     foreach ($test as $row) {
     ?>
-        <div id='review'>
-            <div class="user">
-                <p><?= $row['name_user'] ?></p>
+       <div id='review'>
+            <table id="reviewuser">
+                <tr>
+                    <td>
+                        <div class="user">
+                        <p><?= $row['name_user'] ?></p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <table id="reviewcontent">
+                <tr>
+                    <td>
+                        <div class="game">
+                            <h4><?= $row['name_game'] ?></h4>
+                        </div>
+                        <div class="comment">
+                            <p><?= $row['comment'] ?></p>
+                        </div>
+                        <?php if ($_SESSION['id'] != null) { ?>
+                            <div class="like">
+                                <p><a href="likeaddprocess.php?id_comment=<?= $row['id'] ?>&id_game=<?= $row['id_game'] ?>"><?= $row['likes_count'] ?></a></p>
+                            </div>
+                        <?php } else { ?>
+                            <div class="like">
+                                <p><?= $row['likes_count'] ?></p>
+                            </div>
+                        <?php } ?>
+                    </td>
+                </tr>
+            </table>
             </div>
-            <div class="game">
-                <h4><?= $row['name_game'] ?></h4>
-            </div>
-            <div class="comment">
-                <p><?= $row['comment'] ?></p>
-            </div>
-            <?php if ($_SESSION['id'] != null) { ?>
-                <div class="like">
-                    <p><a href="likeaddprocess.php?id_comment=<?= $row['id'] ?>&id_game=<?= $row['id_game'] ?>"><?= $row['likes_count'] ?></a></p>
-                </div>
-            <?php } else { ?>
-                <div class="like">
-                    <p><?= $row['likes_count'] ?></p>
-                </div>
-            <?php } ?>
-        </div>
     <?php
     }
     ?>

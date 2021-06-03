@@ -47,7 +47,7 @@ td {
     position: relative;
     text-align: center;
     margin: auto;
-    margin-top: 1vw;
+    margin-top: 0.5vw;
     margin-left: 5vw;
     transition: 0.5s;
 }
@@ -113,14 +113,14 @@ td {
 
 #tabeluser {
     margin-bottom: 1vw;
-    padding: 2px;
+    padding: 0.1vw;
 }
 
 #tabelgame {
     margin-bottom: 1vw;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     #formCreate {
         margin-top: 10vw;
     }
