@@ -47,7 +47,7 @@ td {
     position: relative;
     text-align: center;
     margin: auto;
-    margin-top: 3vw;
+    margin-top: 1vw;
     margin-left: 5vw;
     transition: 0.5s;
 }
@@ -58,9 +58,11 @@ td {
     position: relative;
     text-align: center;
     margin: auto;
-    margin-top: 3vw;
+    margin-top: 2vw;
     margin-left: 10vw;
     transition: 0.5s;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
 }
 
 #game img {
@@ -86,8 +88,10 @@ td {
     float: right;
     width: fit-content;
     border: 2px solid black;
-    margin-top: 5vw;
+    margin-top: 2vw;
     margin-right: 11vw;
+    font-family: sans-serif;
+    font-size: 18px;
 }
 
 #titleAdmin {
@@ -109,6 +113,7 @@ td {
 
 #tabeluser {
     margin-bottom: 1vw;
+    padding: 2px;
 }
 
 #tabelgame {
