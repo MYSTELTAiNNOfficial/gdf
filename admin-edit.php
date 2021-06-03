@@ -24,7 +24,7 @@ if($_SESSION['title'] != "admin"){
         ?>
         <table id="tabelgame">
             <tr>
-                <td colspan="2">ID.<?= $row['id'] ?> <?= $row['name'] ?></td>
+                <td colspan="2"><?= $row['name'] ?></td>
                 <tr>
                     <td colspan="2"><img src="<?= $row['img'] ?>"></td>
                 </tr>
@@ -61,6 +61,6 @@ if($_SESSION['title'] != "admin"){
         }
         ?>
 </div>
+<div id="verticalborder"></div>
 </body>
-
 </html>
